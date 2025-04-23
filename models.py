@@ -1,6 +1,4 @@
-# DRL models from Stable Baselines 3
-from __future__ import annotations
-
+# common library
 import time
 
 import numpy as np
@@ -18,6 +16,7 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 from finrl import config
 from finrl.meta.env_stock_trading.env_stocktrading import StockTradingEnv
 from finrl.meta.preprocessor.preprocessors import data_split
+
 
 MODELS = {"a2c": A2C, "ddpg": DDPG, "td3": TD3, "sac": SAC, "ppo": PPO}
 
@@ -277,7 +276,7 @@ class DRLEnsembleAgent:
         self.val_test_period = val_test_period
 
         self.unique_trade_date = df[
-            (df.date > val_test_period[0]) & (df.date <= val_test_period[1])
+            (df.date >= val_test_period[0]) & (df.date <= val_test_period[1])
         ].date.unique()
         self.rebalance_window = rebalance_window
         self.validation_window = validation_window
@@ -294,6 +293,35 @@ class DRLEnsembleAgent:
         self.print_verbosity = print_verbosity
         self.train_env = None  # defined in train_validation() function
 
+        print(
+            f"[INIT] Unique trade dates from {val_test_period[0]} to {val_test_period[1]}"
+        )
+        print(f"[INIT] Total trading days: {len(self.unique_trade_date)}")
+        print(f"[INIT] First 5 dates: {self.unique_trade_date[:5]}")
+        print(f"[INIT] Last 5 dates: {self.unique_trade_date[-5:]}")
+
+        print("\n[INIT PREVIEW] ===== Rebalancing Schedule Summary =====")
+        print(
+            f"{'Iter':<8} {'Train End':<12} {'Val Start':<12} {'Val End':<12} {'Trade Start':<12} {'Trade End':<12}"
+        )
+
+        for i in range(
+            self.rebalance_window + self.validation_window,
+            len(self.unique_trade_date) + 1,
+            self.rebalance_window,
+        ):
+            train_end = self.unique_trade_date[
+                i - self.rebalance_window - self.validation_window
+            ]
+            val_start = self.unique_trade_date[
+                i - self.rebalance_window - self.validation_window
+            ]
+            val_end = self.unique_trade_date[i - self.rebalance_window]
+            trade_start = self.unique_trade_date[i - self.rebalance_window]
+            trade_end = self.unique_trade_date[min(i, len(self.unique_trade_date) - 1)]
+
+            print(f"{i:<8} {train_end} {val_start} {val_end} {trade_start} {trade_end}")
+
     def DRL_validation(self, model, test_data, test_env, test_obs):
         """validation process"""
         for _ in range(len(test_data.index.unique())):
@@ -309,7 +337,7 @@ class DRLEnsembleAgent:
         trade_data = data_split(
             self.df,
             start=self.unique_trade_date[iter_num - self.rebalance_window],
-            end=self.unique_trade_date[iter_num],
+            end=self.unique_trade_date[iter_num + 1],
         )
         trade_env = DummyVecEnv(
             [
@@ -341,9 +369,7 @@ class DRLEnsembleAgent:
         for i in range(len(trade_data.index.unique())):
             action, _states = model.predict(trade_obs)
             trade_obs, rewards, dones, info = trade_env.step(action)
-            if i == (len(trade_data.index.unique()) - 2):
-                # print(env_test.render())
-                last_state = trade_env.envs[0].render()
+            last_state = trade_env.envs[0].render()
 
         df_last_state = pd.DataFrame({"last_state": last_state})
         df_last_state.to_csv(f"results/last_state_{name}_{i}.csv", index=False)
@@ -460,10 +486,9 @@ class DRLEnsembleAgent:
         start = time.time()
         for i in range(
             self.rebalance_window + self.validation_window,
-            len(self.unique_trade_date) - self.rebalance_window + 1,
+            len(self.unique_trade_date) + 1,
             self.rebalance_window,
         ):
-
             validation_start_date = self.unique_trade_date[
                 i - self.rebalance_window - self.validation_window
             ]
