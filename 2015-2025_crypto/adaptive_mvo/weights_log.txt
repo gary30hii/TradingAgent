@@ -1,0 +1,24 @@
+Window 1 Weights:
+OrderedDict({'agg': 0.0, 'bil': 0.09979, 'btcusd': 0.24794, 'gld': 0.36635, 'spy': 0.28592, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
+
+Window 2 Weights:
+OrderedDict({'agg': 0.0, 'bil': 0.23642, 'btcusd': 0.2126, 'gld': 0.27279, 'spy': 0.27819, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
+
+Window 3 Weights:
+OrderedDict({'agg': 0.0, 'bil': 0.09266, 'btcusd': 0.27442, 'gld': 0.29738, 'spy': 0.33554, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
+
+Window 4 Weights:
+OrderedDict({'agg': 0.0, 'bil': 0.29372, 'btcusd': 0.18875, 'gld': 0.26808, 'spy': 0.24944, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
+
+Window 5 Weights:
+OrderedDict({'agg': 0.0, 'bil': 0.42026, 'btcusd': 0.13714, 'gld': 0.24397, 'spy': 0.19863, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
+
+Window 6 Weights:
+OrderedDict({'agg': 0.0, 'bil': 0.4512, 'btcusd': 0.1216, 'gld': 0.22443, 'spy': 0.20277, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
+
+Window 7 Weights:
+OrderedDict({'agg': 0.0, 'bil': 0.32007, 'btcusd': 0.14017, 'gld': 0.30635, 'spy': 0.23341, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
+
+Window 8 Weights:
+OrderedDict({'agg': 0.0, 'bil': 0.13315, 'btcusd': 0.19218, 'gld': 0.37435, 'spy': 0.30032, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
+
