@@ -2,23 +2,5 @@ Window 1 Weights:
 OrderedDict({'agg': 0.0, 'bil': 0.37439, 'gld': 0.31128, 'spy': 0.31434, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
 
 Window 2 Weights:
-OrderedDict({'agg': 0.0, 'bil': 0.46163, 'gld': 0.2441, 'spy': 0.29427, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
-
-Window 3 Weights:
-OrderedDict({'agg': 0.0, 'bil': 0.27688, 'gld': 0.31302, 'spy': 0.41011, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
-
-Window 4 Weights:
-OrderedDict({'agg': 0.0, 'bil': 0.32313, 'gld': 0.31609, 'spy': 0.36078, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
-
-Window 5 Weights:
 OrderedDict({'agg': 0.0, 'bil': 0.44013, 'gld': 0.27807, 'spy': 0.2818, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
-
-Window 6 Weights:
-OrderedDict({'agg': 0.0, 'bil': 0.45216, 'gld': 0.26197, 'spy': 0.28587, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
-
-Window 7 Weights:
-OrderedDict({'agg': 0.0, 'bil': 0.34726, 'gld': 0.33396, 'spy': 0.31878, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
-
-Window 8 Weights:
-OrderedDict({'agg': 0.0, 'bil': 0.25407, 'gld': 0.36922, 'spy': 0.37671, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
 
