@@ -1,6 +1,6 @@
-Window 1 Weights:
-OrderedDict({'agg': 0.0, 'bil': 0.4267, 'gld': 0.32551, 'spy': 0.24778, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
+Window 1 (2023-04-05 00:00:00):
+OrderedDict({'agg': 0.01, 'bil': 0.10003, 'gld': 0.5, 'spy': 0.34997, 'vb': 0.01, 'vnq': 0.01, 'vo': 0.01, 'vwo': 0.01})
 
-Window 2 Weights:
-OrderedDict({'agg': 0.0, 'bil': 0.47841, 'gld': 0.28822, 'spy': 0.23337, 'vb': 0.0, 'vnq': 0.0, 'vo': 0.0, 'vwo': 0.0})
+Window 2 (2024-04-08 00:00:00):
+OrderedDict({'agg': 0.01, 'bil': 0.0732, 'gld': 0.5, 'spy': 0.3768, 'vb': 0.01, 'vnq': 0.01, 'vo': 0.01, 'vwo': 0.01})
 

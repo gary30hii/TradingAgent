@@ -1,0 +1,10 @@
+Dataset,Strategy,Trade Frequency (%),Avg Holding Period (days)
+2007-2025_no_crypto,Naive,0.0,505.0
+2007-2025_no_crypto,Mean,0.0,505.0
+2007-2025_no_crypto,Adaptive-Mean,0.2,441.0
+2015-2025_crypto,Naive,0.0,505.0
+2015-2025_crypto,Mean,0.0,505.0
+2015-2025_crypto,Adaptive-Mean,0.2,448.0
+2015-2025_no_crypto,Naive,0.0,505.0
+2015-2025_no_crypto,Mean,0.0,505.0
+2015-2025_no_crypto,Adaptive-Mean,0.2,441.0
