@@ -1,0 +1,11 @@
+Category,Strategy,Trade Frequency (%),Avg Holding Period (days)
+DRL,A2C,5.35,18.04
+DRL,DDPG,0.2,252.5
+DRL,PPO,15.84,6.66
+DRL,SAC,0.2,252.5
+DRL,TD3,0.2,252.5
+Strategy,Naive,0.0,505.0
+Strategy,Mean,0.0,505.0
+Strategy,Adaptive-Mean,0.2,448.0
+Min-Var,Min,99.6,171.49
+Merged,Merged-Trade,35.91,5.22
