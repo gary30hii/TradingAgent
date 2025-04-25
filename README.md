@@ -44,9 +44,9 @@ This work utilizes the **FinRL framework** developed by the AI4Finance Foundatio
 
 Prepared datasets used in experiments:
 
-- `2007-2025_no_crypto.csv`  *(Stock-only portfolio)*
-- `2015-2025_crypto.csv`      *(Crypto-focused portfolio)*
-- `2015-2025_no_crypto.csv`  *(Recent stock-only portfolio)*
+- `2007-2025_no_crypto.csv`  
+- `2015-2025_crypto.csv`      
+- `2015-2025_no_crypto.csv`  
 
 Each experiment's output is saved in directories named after the dataset file.
 
