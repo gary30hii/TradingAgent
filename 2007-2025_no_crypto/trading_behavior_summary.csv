@@ -4,8 +4,8 @@ DRL,DDPG,0.2,252.5
 DRL,PPO,87.13,1.21
 DRL,SAC,0.2,252.5
 DRL,TD3,0.2,252.5
-Strategy,Naive,0.0,505.0
-Strategy,Mean,0.0,505.0
-Strategy,Adaptive-Mean,0.2,441.0
-Min-Var,Min,98.02,191.74
-Merged,Merged-Trade,32.74,4.76
+Rules,Naive,0.0,505.0
+Rules,Mean,0.0,505.0
+Rules,Adaptive-Mean,0.2,441.0
+Rules,Min-Var,98.02,191.74
+DRL,Ensemble,32.74,4.76
